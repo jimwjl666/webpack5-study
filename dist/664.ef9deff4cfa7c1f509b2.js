@@ -1,0 +1,1 @@
+(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([[664],{6664:(e,o,n)=>{"use strict";n.r(o),n.d(o,{default:()=>c});var t=n(8686);function c(e){console.log((0,t.Z)(["Another2","module2","loaded2",e]))}},8686:(e,o,n)=>{"use strict";n.d(o,{Z:()=>c});var t=Array.prototype.join;const c=function(e,o){return null==e?"":t.call(e,o)}}}]);

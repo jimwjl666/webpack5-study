@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "One";
+  src: url(./study.woff) format('woff');
+}
+body{
+  background:url(./webpack.png) no-repeat;
+  font-family: "one";
+}
