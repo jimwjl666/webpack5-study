@@ -1,15 +1,28 @@
 {
   "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose" : true }]
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@babel/plugin-syntax-top-level-await"
+    ]
   ],
   "presets": [
     [
-      "@babel/preset-env",{
-        "useBuiltIns":"usage",
-        "corejs":3
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3
       }
     ]
   ]
-  
 }
