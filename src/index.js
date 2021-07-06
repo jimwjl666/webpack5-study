@@ -1,5 +1,8 @@
 
-import './styles.css'
+import '@/styles.css'
+import vue from 'vue'
+console.log('vue',vue)
+
 import(
   /* webpackChunkName:'prefetch1' */ 
   /* webpackPrefetch:true */ 

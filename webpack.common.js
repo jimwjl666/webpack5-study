@@ -94,6 +94,7 @@ module.exports = {
    /*  new CleanWebpackPlugin(), 已过时*/
     new HtmlWebpackPlugin(),
     new WebpackCdnPlugin({
+   /*    prodUrl:'http://www.baidu.com', */
       modules: [
         {
           name: 'vue',
@@ -113,10 +114,12 @@ module.exports = {
       ],
       publicPath: '/node_modules'
     })
-    // 前提，先安装模块
+
+    // 前提，先安装模块，相当于全局import
     /* new ProvidePlugin({
       Vue: ['vue/dist/vue.esm.js', 'default'],
     }), */
+
     // 依赖分析模块
     //new BundleAnalyzerPlugin()
     /* new GenerateSW({ 
@@ -148,9 +151,20 @@ module.exports = {
     path: path.resolve(__dirname,'dist'),
     publicPath: '/',
     clean: true,
+    pathinfo: false,
   },
   experiments: {
     // 顶级await
     topLevelAwait: true
+  },
+  /* 通过cnd引用后外部化vue */
+  externals: {
+    vue: 'Vue'
+  },
+  resolve: {
+    extensions: ['.js','.vue','.json'],
+    alias: {
+      '@': path.resolve('src')
+    }
   }
 }
